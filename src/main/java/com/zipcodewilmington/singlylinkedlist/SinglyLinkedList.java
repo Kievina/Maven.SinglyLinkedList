@@ -44,6 +44,7 @@ public class SinglyLinkedList<T extends Comparable<T>> {
                 if (current.next == null) {
                     current.next = newNode;
                     size++;
+                    break;
                 }
                 current = current.next;
             }

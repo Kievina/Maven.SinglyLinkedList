@@ -15,6 +15,7 @@ public class SinglyLinkedListTest {
     @Before
     public void setUp(){
         intList = new SinglyLinkedList();
+
         stringList = new SinglyLinkedList();
     }
 
@@ -25,14 +26,15 @@ public class SinglyLinkedListTest {
 
     @Test
     public void addTest(){
-        intList.add(5);
-
         Integer expected = 5;
+
+        intList.add(5);
         Integer actual = intList.get(0);
+
         Assert.assertEquals(expected, actual);
     }
     @Test
-    public void sizeThreeTest(){
+    public void sizeTest(){
         intList.add(1);
         intList.add(2);
         intList.add(3);
@@ -60,9 +62,6 @@ public class SinglyLinkedListTest {
 
     }
 
-
-
-
     @Test
     public void containsTestFalse(){
         Assert.assertFalse(intList.contains(5));
@@ -74,17 +73,6 @@ public class SinglyLinkedListTest {
         intList.add(4);
         intList.add(5);
         Assert.assertTrue(intList.contains(5));
-    }
-
-    @Test
-    public void clearTest(){
-//        intList.add(3);
-//        intList.add(4);
-//        intList.add(5);
-//
-//        intList.clear();
-//
-//        Assert.assertTrue(intList.isEmpty());
     }
 
     @Test
@@ -224,6 +212,4 @@ public class SinglyLinkedListTest {
         Assert.assertEquals(expectedFirst, actualFirst);
         Assert.assertEquals(expectedLast, actualLast);
     }
-
-
 }
